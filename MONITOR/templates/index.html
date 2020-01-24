@@ -1,0 +1,98 @@
+<html>
+	  <head>
+	    <title>Tab Monitor</title>
+	  </head>
+	  <body bgcolor="white" onkeydown="press_detct(event)">
+
+	  <style>
+		  body{
+		  background-color:white;
+		  }
+		#name
+		{
+		color:purple;
+		}
+		marquee{
+		background-color:purple;
+		border-radius: 8px;
+		}
+		  img {
+  			border: 1px solid #ddd;
+ 			 border-radius: 4px;
+			  padding: 5px;
+			  width=auto;
+			  height=auto;
+ 			 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		button{
+		border-radius:5px;
+		}
+
+		#b1{
+			background-color:purple;
+			width:auto;
+			height:60px;
+			color:white;
+			display:block
+			border: 1px solid black;
+  			margin-top: 10px;
+  			margin-left: 2px;
+  			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+		#b2{
+			background-color:purple;
+			width:auto;
+			height:60px;
+			color:white;
+			display:block
+			margin-top: 10px;
+  			margin-left: 20px;
+  			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
+		#b3{
+			background-color:purple;
+			width:auto;
+			height:60px;
+			color:white;
+			display:block
+			margin-top: 10px;
+  			margin-left: 20px;
+  			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
+
+	  </style>
+
+	  <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.js"></script>
+	  <script type="text/javascript">
+		  var fruits=[];
+		  function start()
+		  {
+		  	var result=confirm("Are you sure to start the test?");
+			if (result==true)
+			{	var c=0;
+				alert("Starting the test");
+				var image = document.getElementById("one");
+				p_tag=document.getElementById("result");
+				if (c==1){
+				p_tag.innerHTML="Test submitted...";}
+				image.src="{{url_for('calc')}}";
+			}
+		  }
+
+		  function press_detect()
+		  {
+		  	alert(String.fromCharCode(evt.keyCode));
+		  }
+
+	  </script>
+
+	  <div id="name"><h1 align="center">TAB MONITOR</h1></div>
+	  <marquee><h3 style="color:white">Are you ready to start the test?</h3></marquee>
+		<button id="b1" type="button" onclick="start(event)">START TEST</button>
+	  <center><img src="" border="5" align="middle" id="one" onclick="click_det(event)"></center>
+	  <p id="result"></p>
+	  </body>
+	</html>
