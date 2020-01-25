@@ -1,0 +1,69 @@
+<html>
+	  <head>
+	    <title>TEST</title>
+	  </head>
+	  <body bgcolor="#00bbaa" onkeydown="check_press(event)">
+
+	  <style>
+	      .title{
+	      letter-spacing:3px;
+	      word-spacing: 6px;
+	      background-color: #00ffaa;
+	      border-radius:9px;
+	      }
+
+		  #program{
+		  border-radius:9px;
+		  height:500px;
+		  width:1000px;
+    	  font-size:14pt;
+    	  resize:horizontal;
+		  }
+
+		  #sub_button{
+		  font-size:30px;
+		  border-radius:9px;
+		   background-color: #00ffaa;
+		   color : #9e9e9e;
+		   width : 125px;
+		   height : 45px;
+		  }
+
+		  #sub_button:hover{
+		  font-size:30px;
+		  border-radius:9px;
+		   background-color: #9e9e9e;
+		   color : #00ffaa;
+		   width : 125px;
+		   height : 45px;
+		  }
+
+	  </style>
+
+	  <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.js"></script>
+	  <script type="text/javascript">
+	  		var c=0;
+		  function redirect()
+		  {
+		  	location.href="http://127.0.0.1:5000/redirecter";
+		  }
+
+		  function check_press()
+		  {
+        	var x = event.key;
+        	if (x=="Meta" || x=="OS"){
+        		c++;
+        	}
+        	if(c==4){
+        	redirect()
+        	}
+		  }
+
+	  </script>
+
+	  <div id="name"><h1 align="center" class="title">TEST</h1></div>
+	  <marquee><h3 class="title">YOU ARE NOT ALLOWED TO LEAVE WINDOW BEFORE SUBMISSION OF THE TEST</h3></marquee>
+	  <textarea name="pro" id="program" width="108" height="108" autocomplete="on" placeholder="write your program here" required></textarea><br /><br />
+	  <button  onclick="setTimeout(redirect,5000);" id="sub_button">click!</button>
+	  </body>
+	</html>

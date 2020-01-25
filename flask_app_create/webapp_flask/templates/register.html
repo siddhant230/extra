@@ -1,0 +1,90 @@
+<html>
+ <head>
+  <title>Video Streaming Demonstration</title>
+     <style>
+         .card{
+         width:500px;
+         height : 650px;
+          top: 80%;
+          left: 50%;
+           border-radius:9px;
+          box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+         background-color: #9e9e9e;
+         }
+         .card:hover{
+         border-radius:9px;
+         box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+         }
+         .container{
+         padding : 2px 16px;
+         }
+
+         h1{
+         letter-spacing:5px;
+         border-radius:9px;
+         text-shadow:2px 2px 5px grey;
+         color : #00ffaa;
+         }
+
+         .textarea{
+         border-radius:9px;
+         font-size:16pt;
+         width : 255px;
+         height : 35px;
+         }
+
+        .password{
+        border-radius:9px;
+        font-size:16pt;
+         width : 255px;
+         height : 35px;
+        }
+
+        #button{
+        font-size:20px;
+        letter-spacing:5px;
+        border-radius:9px;
+        background-color: #00ffaa;
+        color : #9e9e9e;
+         width : 125px;
+         height : 45px;
+        }
+
+        #button:hover{
+        letter-spacing:5px;
+        font-size:20px;
+         border-radius:9px;
+         background-color:#9e9e9e;
+         color : #00ffaa;
+         width : 125px;
+         height : 45px;
+        }
+
+     </style>
+ </head>
+ <body bgcolor="#00ccaa">
+ <h1 align="center" style="background-color: #9e9e9e;">REGISTER</h1>
+ <center>
+  <div class="card">
+     <div class="container">
+           <form method="post">
+               <h1>name : </h1>
+               <input name="text" type="text" required autofocus class="textarea" placeholder="User123"><br />
+
+               <h1>E-mail : </h1>
+               <input name="email" type="text" required autofocus class="textarea" placeholder="abc123@gmail.com"><br />
+
+               <h1>Password : </h1>
+               <input type="password" name="pass" required autofocus class="password" placeholder="password"><br />
+
+               <h1>Confirm Password : </h1>
+               <input type="password" name="confpass" required autofocus class="password" placeholder="confirm password"><br /><br /><br />
+
+               <input type="submit" value="SUBMIT" name="submit" id="button"><br><br />
+               <h2>{{content}}</h2>
+           </form>
+     </div>
+  </div>
+ </center>
+ </body>
+</html>
